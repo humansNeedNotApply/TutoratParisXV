@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorat Paris 15ème | primaire, collège, lycée</title>
+    <meta name="description" content="Amateur math tutoring services for all grade levels. Personalized lessons, flexible scheduling, and (who knows ?) results.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/MathStock2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+        
+        .input-blocked input{
+            pointer-events: none;
+            background-color: gray;
+        }
+        .input-blocked label{
+            pointer-events: none;
+            opacity: 50%;
+        }
+
+    </style>
+</head>
+<body class="font-sans text-secondary-700 bg-white">
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center animate-fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Tutorat en Math</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Un petit coup de pouce ou un gros coup de pied : des Maths de la primaire jusqu'à la première</p>
+            <a href="#services" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all inline-block">Mes Services</a>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-primary-700">Tutorat Paris 15ème</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="hover:text-primary-600 transition-all">Services</a>
+                    <a href="#about" class="hover:text-primary-600 transition-all">Mon parcours</a>
+                    <a href="#contact" class="hover:text-primary-600 transition-all">Contactez-moi</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Informations</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition-all animate-slide-up">
+                    <div class="text-primary-600 text-4xl mb-4">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Cours de Math</h3>
+                    <p class="text-secondary-600 mb-4">Cours personnalisés pour le primaire, le collège, la 2nde et la 1ère (y compris Spé. Math !). Dans le programme ou hors du programme, l'important c'est des s'amuser.</p>
+                    <div class="text-primary-700 font-bold text-lg mb-4">Réviser, consolider des aquis, surmonter des difficultés et ... faire les devoirs &#128530</div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition-all animate-slide-up">
+                    <div class="text-primary-600 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Modalités</h3>
+                    <ul class="text-secondary-600 mb-4">
+                        <li>Cours particuliers</li>
+                        <li>A domicile ou en visio</li>
+                        <li>30min / 1h / 1h30</li>
+                        <li>le soir en semaine ou le Samedi matin</li>
+                        <li>paiement en espèce ou en chèque</li>
+                    </ul>
+                    <div class="text-primary-700 font-bold text-lg mb-4">Tout est flexible, on fait au plus pratique</div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition-all animate-slide-up">
+                    <div class="text-primary-600 text-4xl mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Prix :<span class="text-primary-600"> 12€/h - 8€/30min </span></h3>
+                    <p class="text-secondary-600 mb-4">Mes tarifs sont hautement négotiables, profitez de la séance d'essai pour m'en parler. <br>
+                        Par ailleurs, je propose des cours gratuits pour les familles en difficultés financière : si vous voulez me soutenir, il suffit d'arrondir à 10€ ou 15€. Merci d'avance pour votre aide !
+                    </p>
+                    <div class="text-primary-700 font-bold text-lg mb-4">Qui ne tente rien n'a rien : la première séance est bien sûr &#10024;GRATUITE&#10024;</div>
+                </div>
+            </div>
+            
+            <!-- Additional Info Section -->
+            <div class="mt-16 bg-white p-8 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-semibold mb-6">Informations Additionnelles</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-medium text-lg mb-3">Horaires</h4>
+                        <p class="text-secondary-600">Mes horaires peuvent être un peu compliquées, si vous souhaitez avoir un cours par semaine (ce que je conseille), je ferai de mon mieux pour assurer lar régularité de ces derniers. Cependant, il se peut que certains cours sautent. Réciproquement, si vos enfants ne peuvent pas assister à un cours, il n'y a pas de problème : prevenez-moi simplement à l'avance, la séance ne sera pas dû.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-lg mb-3">Programme et Ressources</h4>
+                        <p class="text-secondary-600">Je peux voir/revoir toutes les notions apprises en primaire/au collège/au lycée (excepté Terminale). Je ne reste tout de même qu'un ajout à ce qui est vu à l'école, là pour réexpliquer des concepts encore un peu vagues et s'y entraîner. Je serai ravis de pousser un peu plus loin et d'explorer d'autres parties des mathématiques, mais je ne prevois pas de fournir des ressources supplémentaires (ou s'il le faut, j'utiliserai celles de mon lycée).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Mon Parcours</h2>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/3">
+                    <img src="Images/photoGroup.jpg" alt="Math tutor portrait" class="rounded-xl shadow-md w-full mb-1" loading="lazy">
+                    <div class="flex">
+                        <img
+                          src="Images/photoSeul.jpg"
+                          alt="Math tutor portrait"
+                          class="rounded-xl shadow-md w-1/2 mr-1"
+                          loading="lazy"
+                        />
+                        <img
+                          src="Images/logoEJM.png"
+                          alt="Math tutor portrait"
+                          class="rounded-xl shadow-md w-1/2 object-contain h-auto ml-1"
+                          loading="lazy"
+                        />
+                      </div>
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-semibold mb-4">Bonjour !</h3>
+                    <p class="text-secondary-600 mb-6">Je m'appelle Ulysse, j'ai 17 ans et je suis en Terminale au lycée Jeannine Manuel dans Paris-15. Vous vous direz sûrement que ce n'est pas beaucoup pour proposer des cours de maths, mais je peux vous assurer que ça va aller :</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-primary-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-graduation-cap text-primary-600"></i>
+                            </div>
+                            <span>Je suis dans la tête de cohorte du 6ème meilleur lycée de France (selon le <a class="text-primary-700" href="https://etudiant.lefigaro.fr/lycee/classement/">Figaro</a>)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-primary-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-award text-primary-600"></i>
+                            </div>
+                            <span>Je suis arrivé 5ème aux Olympiades de Mathématiques par équipe</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-primary-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-user-graduate text-primary-600"></i>
+                            </div>
+                            <span>Je prépare mon <a class="text-primary-700" href="https://apstudents.collegeboard.org/courses/ap-calculus-bc">Advanced Preparatory : Calculus BC</a>, examen du College Board americain</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-primary-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-award text-primary-600"></i>
+                            </div>
+                            <span>Mes derniers classement nationaux au <a class="text-primary-700" href="https://www.education.gouv.fr/kangourou-des-mathematiques-10016">concours Kangourou des Mathématiques</a> : 25ème, 16ème, 23ème</span>
+                        </div>
+                    </div>
+                    
+                    <button id="showMoreBtn" class="text-primary-600 hover:text-primary-800 font-medium transition-all">
+                        Un peu plus <i class="fas fa-chevron-down ml-1"></i>
+                    </button>
+                    
+                    <div id="moreAbout" class="hidden mt-6 animate-fade-in">
+                        <p class="text-secondary-600 mb-4">En effet je suis particulièrement jeune, mais je n'en suis pas moins inexperimenté. C'est presque l'inverse, il est beaucoup plus simple pour moi de me mettre dans la peau de l'apprenant, en étant encore un moi-même, et de comprendre ce qui est attendu d'eux.</p>
+                        <p class="text-secondary-600">Je ne peux pas promettre de résultats scolaires, ceux-ci ne dépendent que de l'effort qui y est mis. Je me concentre plutôt sur la compréhension des notions, qui sont les seuls points veritablement bloquants entre une mauvaise et une bonne note. Et puis faire quelque chose qu'on ne comprend pas, c'est vachement moins drôle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Me Contacter</h2>
+            
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-sm">
+                <form id="contactForm" class="grid md:grid-cols-2 gap-6">
+                    <div class="md:col-span-2">
+                        <h3 class="text-xl font-semibold mb-4">Détails</h3>
+                    </div>
+                    
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-secondary-700 mb-1">Nom</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-secondary-300 rounded-md focus:ring-primary-500 focus:border-primary-500">
+                    </div>
+                    
+                    <div>
+                        <label for="grade" class="block text-sm font-medium text-secondary-700 mb-1">Classe</label>
+                        <select id="grade" name="grade" required class="w-full px-4 py-2 border border-secondary-300 rounded-md focus:ring-primary-500 focus:border-primary-500">
+                            <option value="" style="font-weight: bolder;">Choisissez un niveau</option>
+                            <hr>
+                            <option value="elementary">Primaire</option>
+                            <hr>
+                            <option value="middle">6ème</option>
+                            <option value="high">5ème</option>
+                            <option value="college">4ème</option>
+                            <option value="other">3ème</option>
+                            <hr>
+                            <option value="other">2de</option>
+                            <option value="other">1ère</option>
+                            <option value="other">1ère (Spé. Math)</option>
+
+                        </select>
+                    </div>
+
+                    <div class="flex items-center justify-left mb-2">
+                        <label for="distanciel" class="text-sm font-medium text-secondary-700 mr-2">
+                          Distanciel
+                        </label>
+                        <input 
+                          type="checkbox" 
+                          id="distanciel" 
+                          name="distanciel"
+                          class="h-5 w-5 text-primary-600 border-secondary-300 rounded focus:ring-primary-500"
+                        >
+                    </div>
+
+                    <div id="addressDiv">
+                        <label for="address" class="transition-allblock text-sm font-medium text-secondary-700 mb-1">Adresse</label>
+                        <input type="text" id="address" name="address" required class="transition-all w-full px-4 py-2 border border-secondary-300 rounded-md focus:ring-primary-500 focus:border-primary-500">
+                    </div>
+                    <script>
+                        const distCheckbox = document.querySelector("#distanciel");
+                        const addressDiv = document.querySelector("#addressDiv");
+                        const addressInput = addressDiv.querySelector("input");
+                        distCheckbox.addEventListener("change", e => {
+                            addressDiv.classList.toggle("input-blocked");
+                            addressInput.required = !addressInput.required;
+                        });
+                    </script>
+
+                    
+                    <div class="md:col-span-2">
+                        <label for="message" class="block text-sm font-medium text-secondary-700 mb-1">Comment puis-je vous aider ? (Difficultées spécifiques, attendus, etc.)</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-16 py-2 border border-secondary-300 rounded-md focus:ring-primary-500 focus:border-primary-500" placeholder="aide pour les devoirs et travail sur les idéntitées remarquables ..."></textarea>
+                    </div>
+                    
+                    <div  class="md:col-span-2">
+                        <h1 class="text-2xl font-bold mb-4">Choisissez votre horaire / vos horaires</h1>
+                        <div class="overflow-x-auto">
+                          <table class="table-fixed border-collapse w-full">
+                            <thead>
+                              <tr>
+                                <th class="w-24 border p-2">Heure</th>
+                                <th class="border p-2">Lun</th>
+                                <th class="border p-2">Mar</th>
+                                <th class="border p-2">Mer</th>
+                                <th class="border p-2">Jeu</th>
+                                <th class="border p-2">Ven</th>
+                                <th class="border p-2" style="border-left-width: 2px; border-left-color: rgb(191, 188, 188);">Sam (Matin)</th>
+                              </tr>
+                            </thead>
+                            <tbody id="timetable"></tbody>
+                          </table>
+                        </div>
+                    
+                    </div>
+                    <div class="md:col-span-2 flex justify-end">
+                        <button type="submit" id="submit" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-6 rounded-lg transition-all">Réserver</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tutorat en Math</h3>
+                    <p class="text-secondary-300">Aide en math pour la primaire, le collège et le lycée, pour rattraper le retard ou prendre de l'avance.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens Rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-secondary-300 hover:text-white transition-all">Services</a></li>
+                        <li><a href="#about" class="text-secondary-300 hover:text-white transition-all">Mon Parcours</a></li>
+                        <li><a href="#contact" class="text-secondary-300 hover:text-white transition-all">Contactez-moi</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-secondary-300">
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i>ulysse.hergault@gmail.com</li>
+                        <!-- <li class="flex items-center"><i class="fas fa-phone mr-2"></i> (123) 456-7890</li> -->
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Station de Métro Lourmel</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-secondary-700 mt-8 pt-8 text-center text-secondary-400">
+                <p>&copy; 2025 Ulysse Hergault-Boursin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-xl max-w-md w-full mx-4 animate-slide-up">
+            <h3 class="text-xl font-bold mb-4">Comment vous contacter ?</h3>
+            <form id="contactInfoForm" class="space-y-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-secondary-700 mb-1">Adresse Mail</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-secondary-300 rounded-md focus:ring-primary-500 focus:border-primary-500">
+                </div>
+                <div class="text-center text-secondary-500">- OU -</div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-secondary-700 mb-1">Num. de Téléphone</label>
+                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-secondary-300 rounded-md focus:ring-primary-500 focus:border-primary-500">
+                </div>
+                <div class="flex justify-end space-x-4 pt-4">
+                    <button type="button" id="cancelModal" class="text-secondary-600 hover:text-secondary-800 font-medium">Annuler</button>
+                    <button type="submit" class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-all">Envoyer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // const appURL = "https://script.google.com/macros/s/AKfycbwSSNRAdCdYdyS6s8RGylDgjlAaOTtU4fL56CTPiEZWoj-NYGFkHONaSVFNBHjXnc2PIA/exec";
+        // const appURL = "https://script.google.com/macros/s/AKfycbyc-dRtdFvznV2xXvGp2Pana-D_6RPQJUaU67MWI7PnXmAwfvwGRlUz2RPpUAovch__lg/exec";
+        // const appURL = "https://script.google.com/macros/s/AKfycbyFx5Lqx895iGzrPXtMQ7YFfMIGvnk3m9wAyVCp-PrC4LUhcfqpvb_h-YRCi8rsTF0VbA/exec";
+        const appURL = "https://script.google.com/macros/s/AKfycbzKCiCswy5UMvxxzpinGZpNxaHs0IrDcRhDXf7nZszVY3H18Do9KZnEcLWPawUViENimA/exec";
+
+        const hours = [
+                              "17:00", "17:30",
+                              "18:00", "18:30",
+                              "19:00", "19:30",
+                              "20:00", "20:30"
+                            ];
+                            const saturdayMorning = [
+                              "08:00", "08:30",
+                              "09:00", "09:30",
+                              "10:00", "10:30",
+                              "11:00", "11:30",
+                            ];
+                            const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+
+                            
+                            let takenSlots = []; // Add already booked slots here
+                            let unavailableSlots = []; // Add unavailable slots here
+                            let selectedSlots = [];
+
+                            function createTimeTable(slots){
+                                const timetable = document.getElementById("timetable");
+                            
+                                const getTimeSlots = (day) => day === "Sat" ? saturdayMorning : hours;
+                                const stateClasses = {
+                                  unavailable: ["bg-gray-400", "cursor-not-allowed"],
+                                  available: ["bg-gray-100", "hover:bg-gray-200", "cursor-pointer"],
+                                  taken: ["bg-red-400", "cursor-not-allowed"],
+                                  selected: ["bg-green-400"],
+                                };
+                            
+                                days.forEach((day, colIndex) => {
+                                  const times = getTimeSlots(day);
+                                  times.forEach((time, rowIndex) => {
+                                    const id = `${day}-${time}`;
+                                    let row = timetable.querySelector(`tr[data-time="${hours[rowIndex]}"]`);
+                                    if (!row) {  
+                                      row = document.createElement("tr");
+                                      row.setAttribute("data-time", time);  
+                                      const timeCell = document.createElement("td");
+                                      timeCell.className = "border p-2 text-sm font-semibold";
+                                      timeCell.innerText = time;
+                                      row.appendChild(timeCell);
+                                      timetable.appendChild(row);
+                                    }
+                                
+                                    const cell = document.createElement("td");
+                                    if(day == "Sat"){
+                                        cell.innerText = times[rowIndex];
+                                        cell.style.borderLeftWidth = "2px";
+                                        cell.style.borderLeftColor = "rgb(191, 188, 188)";
+                                    } 
+                                    cell.className = "border p-2 text-center transition-colors";
+                                    cell.dataset.id = id;
+                                
+                                    // Determine state
+                                    let state = "available";
+                                    if (slots.unavailable.includes(id)) {
+                                    state = "unavailable";
+                                  } else if (slots.taken.includes(id)) {
+                                    state = "taken";
+                                  }
+                              
+                                  cell.classList.add(...stateClasses[state]);
+                              
+                                  // Add click handler if selectable
+                                  if (state === "available") {
+                                    cell.addEventListener("click", () => {
+                                      if (cell.classList.contains(stateClasses.selected)) {
+                                        cell.classList.remove(stateClasses.selected);
+                                        cell.classList.add(stateClasses.available);
+                                        selectedSlots = selectedSlots.filter(v => v!= cell.dataset.id);
+
+                                      } else {
+                                        cell.classList.remove(stateClasses.available);
+                                        cell.classList.add(stateClasses.selected);
+                                        selectedSlots.unshift(cell.dataset.id);
+                                      }
+                                    });
+                                  }
+                              
+                                  row.appendChild(cell);
+                                });
+                                });
+                            }
+                            fetch(appURL+"?action=getSlots")
+                                .then(res => res.json())
+                                .then(body => {
+                                    console.log(body);
+                                    let data = body;
+                                    unavailableSlots = data.unavailable;
+                                    takenSlots = data.taken;
+                                    createTimeTable(data);
+                                })
+                            
+                            
+
+
+
+
+
+
+
+        // Show more about section
+        document.getElementById('showMoreBtn').addEventListener('click', function() {
+            const moreAbout = document.getElementById('moreAbout');
+            const icon = this.querySelector('i');
+            
+            if (moreAbout.classList.contains('hidden')) {
+                moreAbout.classList.remove('hidden');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+                this.textContent = 'Un peu moins ';
+                this.appendChild(icon);
+            } else {
+                moreAbout.classList.add('hidden');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+                this.textContent = 'Un peu plus ';
+                this.appendChild(icon);
+            }
+        });
+        
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if(!selectedSlots.length){
+                alert("Vous n'avez pas séléctionné d'heure");
+                return
+            }
+            document.getElementById('contactModal').classList.remove('hidden');
+        });
+        
+        // Modal handling
+        document.getElementById('cancelModal').addEventListener('click', function() {
+            document.getElementById('contactModal').classList.add('hidden');
+        });
+        
+        document.getElementById('contactInfoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!email && !phone) {
+                alert('Il me faut au moins un email ou un numéro de téléphone pour pouvoir vous contacter.');
+                return;
+            }
+            
+            // Here you would typically send the form data to a server
+            let contactForm = document.getElementById('contactForm');
+            let contactInfoForm = document.getElementById('contactInfoForm');
+            
+            let request = {
+                requestedTime : selectedSlots,
+                name : contactForm.querySelector("input[name=name]").value,
+                grade : contactForm.querySelector("select[name=grade]").value,
+                dist : distCheckbox.value,
+                address : contactForm.querySelector("input[name=address]").value,
+                details : contactForm.querySelector("textarea[name=message]").value,
+                email : contactInfoForm.querySelector("input[name=email]").value,
+                phone : contactInfoForm.querySelector("input[name=phone]").value 
+            }
+
+            let requestForm = new FormData();
+            for (const key in request){
+                if(request.hasOwnProperty(key)){
+                    requestForm.append(key, request[key])
+                }
+            }
+
+            fetch(appURL, {
+                method : "POST",
+                // redirect: "follow", 
+                body: JSON.stringify(request), 
+                headers: { "Content-Type": "text/plain;charset=utf-8", }
+            })
+            
+            alert('Merci beaucoup. Je prendrais contact avec vous sous peu :)');
+            document.getElementById('contactModal').classList.add('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
